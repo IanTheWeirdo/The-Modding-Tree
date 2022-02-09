@@ -1,11 +1,13 @@
 addLayer("p", {
+    name: "Pennies"
+    symbol: "P"
     startData() { return {                  
         unlocked: true,                     
         points: new Decimal(0),           
     }},
 
     color: "#4BDC13",                       
-    resource: "prestige points",            
+    resource: "pennies",            
     row: 0,                               
 
     baseResource: "points",                 
