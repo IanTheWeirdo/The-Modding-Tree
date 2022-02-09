@@ -31,7 +31,7 @@ addLayer("r", {
 		title: "The First of Many",
 		description: "Multiply point gain by 2",
 		cost: new Decimal(10),
-	}
+	}}
     layerShown(){return true}
 })
 
