@@ -1,6 +1,6 @@
 addLayer("p", {
-    name: "Pennies"
-    symbol: "P"
+    name: "Pennies",
+    symbol: "P",
     startData() { return {                  
         unlocked: true,                     
         points: new Decimal(0),           
