@@ -5,7 +5,7 @@ addLayer("p", {
     }},
 
     color: "#4BDC13",                       // The color for this layer, which affects many elements.
-    resource: "pennies",            // The name of this layer's main prestige resource.
+    resource: "prestige points",            // The name of this layer's main prestige resource.
     row: 0,                                 // The row this layer is on (0 is the first row).
 
     baseResource: "coins",                 // The name of the resource your prestige gain is based on.
