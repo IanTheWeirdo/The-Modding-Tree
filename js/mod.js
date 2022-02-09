@@ -1,8 +1,8 @@
 let modInfo = {
-	name: "The ??? Tree",
+	name: "The Something Tree",
 	id: "mymod",
-	author: "nobody",
-	pointsName: "points",
+	author: "IanTheWeirdo",
+	pointsName: "coins",
 	modFiles: ["layers.js", "tree.js"],
 
 	discordName: "",
@@ -13,8 +13,8 @@ let modInfo = {
 
 // Set your version in num and name
 let VERSION = {
-	num: "0.0",
-	name: "Literally nothing",
+	num: "1.0",
+	name: "I don't know if doing this was a good thing or a bad thing",
 }
 
 let changelog = `<h1>Changelog:</h1><br>
