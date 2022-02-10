@@ -1,4 +1,4 @@
-addLayer("r", {
+addLayer("p", {
     name: "rocks", // This is optional, only used in a few places, If absent it just uses the layer id.
     symbol: "R", // This appears on the layer's node. Default is the id with the first letter capitalized
     position: 0, // Horizontal position within a row. By default it uses the layer id and sorts in alphabetical order
@@ -24,6 +24,8 @@ addLayer("r", {
     hotkeys: [
         {key: "r", description: "R: Reset for rocks", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
     ],
+	layerShown(){return true}
+	
 	upgrades: {
         rows: 3,
         cols: 3,
@@ -31,7 +33,6 @@ addLayer("r", {
 		title: "The First of Many",
 		description: "Multiply point gain by 2",
 		cost: new Decimal(10),
-	}}
-    layerShown(){return true}
+	}}	
 })
 
