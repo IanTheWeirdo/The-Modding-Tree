@@ -7,7 +7,7 @@ addLayer("r", {
 		points: new Decimal(0),
     }},
     color: "#4BDC13",
-    requires: new Decimal(10), // Can be a function that takes requirement increases into account
+    requires: new Decimal(5), // Can be a function that takes requirement increases into account
     resource: "Rocks", // Name of prestige currency
     baseResource: "points", // Name of resource prestige is based on
     baseAmount() {return player.points}, // Get the current amount of baseResource
@@ -15,6 +15,7 @@ addLayer("r", {
     exponent: 0.5, // Prestige currency exponent
     gainMult() { // Calculate the multiplier for main currency from bonuses
         mult = new Decimal(1)
+	    if(hasUpgrade('r', 12)) mult = mult.times(2)
         return mult
     },
     gainExp() { // Calculate the exponent on main currency from bonuses
@@ -28,12 +29,17 @@ addLayer("r", {
 	
 	upgrades: {
         rows: 1,
-        cols: 3,
+        cols: 5,
         11: {
 		title: "The First of Many",
 		description: "Multiply point gain by 2",
 		cost: new Decimal(10),
 	},
+		
+	12: {
+		title: "Rocks+",
+		description: "Multiply rock gain by 2",
+		cost: new Decimal(20),
     }	
 })
 
@@ -65,3 +71,4 @@ addLayer("c",{
    	 ],
 	layerShown(){return true},
 })
+
