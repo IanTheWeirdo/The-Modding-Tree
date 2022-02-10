@@ -59,9 +59,9 @@ addLayer("c",{
     	gainExp() { // Calculate the exponent on main currency from bonuses
         return new Decimal(1)
    	 },
-    	row: 0, // Row the layer is in on the tree (0 is the first row)
+    	row: 1, // Row the layer is in on the tree (0 is the first row)
    	 hotkeys: [
-        {key: "r", description: "R: Reset for rocks", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
+        {key: "c", description: "C: Reset for coal", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
    	 ],
 	layerShown(){return true},
 })
