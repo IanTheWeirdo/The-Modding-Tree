@@ -24,7 +24,7 @@ addLayer("r", {
     hotkeys: [
         {key: "r", description: "R: Reset for rocks", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
     ],
-	layerShown(){return true}
+	layerShown(){return true},
 	
 	upgrades: {
         rows: 1,
@@ -37,3 +37,31 @@ addLayer("r", {
     }	
 })
 
+addLayer("c",{
+	 name: "Coal",
+	 symbol: "C",
+	 position: 0,
+	startData() { return {
+		unlocked: true,
+		points: new Decimal(0),
+	}},
+	color: "#feffba",
+	requires: new Decimal(10000),
+	resource: "Coal",
+	baseResource: "Rocks",
+	baseAmount() {return player.r.points},
+	type: "normal",
+	exponent: 0.4
+	gainMult() { // Calculate the multiplier for main currency from bonuses
+        mult = new Decimal(1)
+        return mult
+    	},
+    	gainExp() { // Calculate the exponent on main currency from bonuses
+        return new Decimal(1)
+   	 },
+    	row: 0, // Row the layer is in on the tree (0 is the first row)
+   	 hotkeys: [
+        {key: "r", description: "R: Reset for rocks", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
+   	 ],
+	layerShown(){return true},
+})
