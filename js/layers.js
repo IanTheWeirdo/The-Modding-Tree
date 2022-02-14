@@ -46,6 +46,9 @@ addLayer("r", {
 		title: "Pts+",
 		description: "Point gain scales based on rocks",
 		cost: new Decimal(50),
+		effect() {
+        return player[this.layer].points.add(1).pow(0.5)
+    	},
 	},
     }	
 })
