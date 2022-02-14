@@ -1,6 +1,6 @@
 let modInfo = {
 	name: "The Mineral Tree",
-	id: "mymod",
+	id: "wabungus",
 	author: "IanTheWeirdo",
 	pointsName: "points",
 	modFiles: ["layers.js", "tree.js"],
