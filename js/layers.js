@@ -40,6 +40,13 @@ addLayer("r", {
 		title: "Rocks+",
 		description: "Multiply rock gain by 2",
 		cost: new Decimal(20),
+	},
+	
+	13: {
+		title: "Pts+",
+		description: "Point gain scales based on rocks",
+		cost: new Decimal(50),
+	},
     }	
 })
 
